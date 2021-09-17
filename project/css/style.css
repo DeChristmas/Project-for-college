@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    height: 100vh;
+    line-height: 1.6;
+    overflow: hidden;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll; 
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(1,1,1,1);
+  }
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+  }
+  .navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+  }
+  .navbar ul li a:hover {
+    color: skyblue;
+  }
+  .navbar li > a:hover {
+    box-shadow: 0 8px 0 0 limegreen !important; 
+    padding-bottom: 20px;
+    opacity: 1 !important;
+   }
+   .navbar a.active{
+    box-shadow: 0 8px 0 0 #15bf86 !important; 
+    padding-bottom: 20px;
+    margin-bottom: -10px;
+   }
+   section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh; 
+    scroll-snap-align: center;
+  }
+  section h1 {
+    font-size: 3.5rem;
+   font-weight: 900;
+  }
+::-webkit-scrollbar {
+  width: 18px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: black;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background:#1C2833; 
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #abe9cd;
+  background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+  
+}  
+  section#home {
+    background: url('../img/home.jpeg') no-repeat center/cover;;
+  }
+.first {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 900;
+  background: url("../img/title.jpeg");
+  background-size: 40%;
+  background-position: 40% 40%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: rgba(0,0,0,0.08);
+  animation: animation 10s ease 500ms forwards;
+  animation-iteration-count: infinite;
+}
+@keyframes animation {
+  from {
+    background-size: 40%;
+  }
+  to {
+    background-size: 10%;
+  }
+}
+  section#about {
+    background:url("../img/about.jpg");
+  }
+  .title{
+    position: relative;
+    top: 20px;
+  }
+  p.text {
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Montserrat', sans-serif;
+}
+
+p.text {
+  animation:texts 10s ease-out 500ms;
+  animation-iteration-count: infinite;
+  
+}
+@keyframes texts{
+  from{width: 0px;}
+  to{width: 1500px;}
+}
+body hr{
+    width:50px;
+    border: none;
+    
+}
+.sloj{
+    width: 60%;
+    margin: 1rem auto;
+    padding: 2rem;
+    text-align: justify;
+}
+.sloj p{
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    word-spacing: 2px;
+}
+
+.sloj p:first-child::first-letter{
+    color:yellowgreen;
+    font-weight: bold;
+    font-size: 70px;
+    float: left;
+    line-height: 80%;
+    padding-right: 8px;
+    margin-top: -10px;
+}
+
+@media screen and (max-width:600px){
+    .sloj{
+        width: 90%;
+        padding: 1rem;
+    }
+    p.text{
+      white-space: nowrap;
+      overflow: hidden;    
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      text-overflow: ellipsis;
+     
+    }
+    p.text {
+      animation:texts 10s ease-out 500ms;
+      animation-iteration-count: infinite;
+    
+    }
+    @keyframes texts {
+      from{width: 0px;}
+      to{width: 400px;}
+    }
+  
+}
+  section#gallery {
+    background-color:#1C2833; 
+  }
+  .column {
+    display: flex;
+    width: 100%;
+    padding: 4% 1%;
+    box-sizing: border-box;
+    height: 100vh;
+ }
+  .boxes {
+    flex: 1;
+    overflow: hidden;
+    transition: 1s;
+    margin: 0 2%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    line-height: 0;
+    position: relative;
+    bottom: -20px;
+    border-radius: 15px;
+ }
+  .boxes > img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    transition: 1s;
+ }
+  .boxes > span {
+    font-size: 3vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.5;
+ }
+  .boxes:hover {
+    flex: 1 1  40%;
+    
+ }
+  .boxes:hover > img {
+    width: 100%;
+    height: 100%;
+    transition: transform 2s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(70%);
+ }
+  section#contact {
+    background:url("../img/contact.jpeg");
+  }
+  .naslov{
+    position: relative;
+    top: -80px;
+  }
+  .icons{
+    position: relative;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+  .btn{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: black;
+    overflow: hidden;
+    position: relative;
+  }
+  .btn i{
+    line-height: 60px;
+    font-size: 26px;
+    transition: 0.2s linear;
+  }
+  .btn:hover i{
+    transform: scale(1.3);
+    color: black;
+  }
+  .btn::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: limegreen;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+  }
+  .btn:hover::before{
+    animation: animacija 0.5s 1;
+    top: -10%;
+    left: -10%;
+  }
+  @keyframes animacija {
+    0%{
+      left: -110%;
+      top: 90%;}
+    50%{
+      left: 40%;
+      top: -30%;}
+    100%{
+      top: -10%;
+      left: -10%;}
+  }
