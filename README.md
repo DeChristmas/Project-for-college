@@ -1,2 +1,2 @@
 # Project-for-college
-Graduation thesis for the faculty
+Website for PC version/Mobile version
